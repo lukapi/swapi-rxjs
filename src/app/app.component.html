@@ -1,0 +1,20 @@
+<div class="flex-container">
+  <mat-toolbar>
+    <span>Star Wars</span>
+  </mat-toolbar>
+
+  <div *ngIf="loading$ | async; else people_list" class="loading-container">
+    <mat-progress-spinner
+      class="spinner"
+      [color]="color"
+      [mode]="mode"
+    ></mat-progress-spinner>
+    <p>Loading people...</p>
+  </div>
+
+  <ng-template #people_list>
+    <org-people-list [people]="people$ | async"></org-people-list>
+  </ng-template>
+
+  <router-outlet></router-outlet>
+</div>

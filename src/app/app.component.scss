@@ -1,0 +1,28 @@
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* This ensures the container takes up the full height of the viewport */
+  }
+  
+  .spinner {
+    margin-bottom: 10px; /* Adjust as needed to add space between spinner and text */
+  }
+  
+
+  mat-toolbar {
+    flex: 0 0 auto; /* Toolbar does not grow or shrink, maintains its height */
+    z-index: 1000;
+  }
+
+  org-people-list {
+    flex: 1 1 auto; /* Make org-people-list fill the available space */
+    overflow-x: auto; /* Enable horizontal scrolling for the table */
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Set the height of the flex container to 100% of the viewport height */
+  }
